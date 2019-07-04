@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.cc.util.WsNodeProperties",
+      "name": "ws.node",
+      "type": "com.cc.util.WsNodeProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.cc.util.WsNodeProperties",
+      "name": "ws.node.name",
+      "type": "java.lang.String"
+    }
+  ]
+}

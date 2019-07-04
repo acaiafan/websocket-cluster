@@ -1,0 +1,60 @@
+server:
+  port: 8774
+
+spring:
+  application:
+    name: websocket-server
+#  datasource:
+#    url: jdbc:oracle:thin:@192.168.1.1:1521:helowin
+#    username: xx
+#    password: xx
+#    druid:
+#      driver-class-name: oracle.jdbc.OracleDriver
+#      initial-size: 1
+#      max-active: 20
+#      min-idle: 1
+#      max-wait: 20000
+#      pool-prepared-statements: true
+#      max-pool-prepared-statement-per-connection-size: 20
+  activemq:
+    broker-url: tcp://192.168.1.1:61616
+    user: admin
+    password: admin
+  redis:
+    database: 0
+    host: 192.168.1.202
+    port: 6379
+    password: xx
+    timeout: 1000ms
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+
+
+#logging:
+#  level: debug
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+#
+#security:
+#  oauth2:
+#    resource:
+#      id: resource-websocket
+#      user-info-uri: http://localhost:8088/auth-center/user
+#      prefer-token-info: false
+
+token:
+  check: http://192.168.1.1:8088/auth-center/user
+
+ws:
+  node:
+    name: node2

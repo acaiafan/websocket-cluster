@@ -57,4 +57,4 @@ token:
 
 ws:
   node:
-    name: node2
+    name: #{random.uuid}
